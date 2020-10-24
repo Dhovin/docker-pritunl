@@ -1,6 +1,7 @@
 # Pritunl + Docker + LinuxServer.io = <3
 
 Updated to support Wiregaurd
+updated to suppose mongodb 4.2
 
 ## Pull the image
 
