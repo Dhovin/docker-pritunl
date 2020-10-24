@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:bionic
+FROM lsiobase/ubuntu:focal
 LABEL maintainer="Mike Weaver @_bashNinja"
 
 # set version label
@@ -10,8 +10,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -yq && \
     apt-get install -yq software-properties-common apt-utils iptables && \
-    echo "deb https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" > /etc/apt/sources.list.d/mongodb-org-4.0.list && \
-    echo "deb http://repo.pritunl.com/stable/apt bionic main" > /etc/apt/sources.list.d/pritunl.list && \
+    echo "deb https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-4.2.list && \
+    echo "deb http://repo.pritunl.com/stable/apt focal main" > /etc/apt/sources.list.d/pritunl.list && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 9DA31620334BD75D9DCB49F368818C72E52529D4 && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A && \
     apt-get --assume-yes update && \
@@ -29,5 +29,5 @@ RUN \
     echo "root soft nofile 64000" >> /etc/security/limits.conf
 
 COPY root/ /
-EXPOSE 1194 443 80
+EXPOSE 51820 1194 443 80
 VOLUME /config
