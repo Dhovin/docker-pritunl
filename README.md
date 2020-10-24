@@ -1,5 +1,7 @@
 # Pritunl + Docker + LinuxServer.io = <3
 
+Updated to support Wiregaurd
+
 ## Pull the image
 
     docker pull dhovin/docker-pritunl
