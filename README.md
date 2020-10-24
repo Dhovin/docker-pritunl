@@ -2,7 +2,7 @@
 
 ## Pull the image
 
-    docker pull bashninja/docker-pritunl
+    docker pull dhovin/docker-pritunl
 
 ## Run Pritunl
 
@@ -12,8 +12,9 @@
         -p 1194:1194/tcp \
         -p 9700:443/tcp \
         -p 9699:80/tcp \
+        -p 51820:51820/udp \
         --name Pritunl \
-        bashninja/docker-pritunl
+        dhovin/docker-pritunl
 
 ## Configure Pritunl
 
