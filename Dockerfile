@@ -1,5 +1,5 @@
 FROM lsiobase/ubuntu:focal
-LABEL maintainer="Mike Weaver @_bashNinja"
+LABEL maintainer="@dhovin"
 
 # set version label
 ARG BUILD_DATE
@@ -16,7 +16,7 @@ RUN apt-get update -yq && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A && \
     apt-get --assume-yes update && \
     apt-get --assume-yes upgrade && \
-    apt-get --assume-yes install pritunl mongodb-server wireguard-tools && \
+    apt-get --assume-yes install pritunl mongodb-server wireguard-tools wireguard-dkms && \
     # Cleanup
     apt-get clean -y && \
     apt-get autoremove -y && \
