@@ -1,7 +1,14 @@
 # Pritunl + Docker + LinuxServer.io = <3
 
-Updated to support Wireguard \
-Updated to suppose mongodb 4.2
+- Updated to Focal base
+- Updated to support Wireguard 
+- Updated to suppose mongodb 4.2
+
+## Unraid
+*This will overwrite bashninja's instance.
+- add https://github.com/Dhovin/docker-templates to template repositories
+- Add Container and select 'docker-pritunl' from list 
+- Open console and type 'pritunl default-password' for initial password.
 
 ## Pull the image
 
