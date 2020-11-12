@@ -10,8 +10,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -yq && \
     apt-get install -yq software-properties-common apt-utils iptables && \
-    echo "deb https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-4.2.list && \
-    echo "deb https://repo.pritunl.com/stable/apt focal main" > /etc/apt/sources.list.d/pritunl.list && \
+	add-apt-repository 'deb https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.2 multiverse' && \
+	add-apt-repository 'deb https://repo.pritunl.com/stable/apt focal main' && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv E162F504A20CDF15827F718D4B7C549A058F8B6B && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A && \
     apt-get --assume-yes update && \
