@@ -4,6 +4,9 @@
 - Updated to support Wireguard 
 - Updated to suppose mongodb 4.2
 
+FYI, you need to install the wireguard app next to the Pritunl client to get WG to work, atleast on Windows. \
+https://www.wireguard.com/install/ 
+
 ## Unraid
 *This will overwrite bashninja's instance.
 - add https://github.com/Dhovin/docker-templates to template repositories
