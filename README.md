@@ -2,7 +2,7 @@
 
 - Updated to Focal base
 - Updated to support Wireguard 
-- Updated to suppose mongodb 4.2
+- Updated to support mongodb 4.2
 
 FYI, you need to install the wireguard app next to the Pritunl client to get WG to work, atleast on Windows. \
 https://www.wireguard.com/install/ 
